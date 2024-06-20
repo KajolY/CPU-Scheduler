@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CPU Scheduler</h1>
+        <div>
+            <label for="arrivalTime">Arrival Time:</label>
+            <input type="number" id="arrivalTime" name="arrivalTime">
+            <label for="burstTime">Burst Time:</label>
+            <input type="number" id="burstTime" name="burstTime">
+            <label for="priority">Priority:</label>
+            <input type="number" id="priority" name="priority">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <div id="tasks" class="task-list"></div>
+        <button onclick="scheduleTasks()">Schedule</button>
+        <div class="canvas-container">
+            <canvas id="statsChart"></canvas>
+        </div>
+        <div id="resultsTable" class="table-container"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
